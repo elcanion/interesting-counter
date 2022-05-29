@@ -11,9 +11,12 @@ function App() {
     setCount(prevValue => {
       return prevValue + 1
     })
-    var url = `http://numbersapi.com/${count + 1}/trivia`
+    var url = `https://numbersapi.p.rapidapi.com/${count + 1}/trivia`
     fetch(url, {
+      params: {fragment: 'true', json: 'true'},
       headers:{
+        'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com',
+        'X-RapidAPI-Key': '6b8cb98aeamsh95d9eb3ac3d024ap1fb25bjsnde62f6552c1d',
         'x-requested-with': 'text/plain'
       }
     })
@@ -25,9 +28,12 @@ function App() {
     setCount(prevValue => {
       return prevValue - 1
     })
-    var url = `http://numbersapi.com/${count - 1}/trivia`
+    var url = `https://numbersapi.p.rapidapi.com/${count - 1}/trivia`
     fetch(url, {
+      params: {fragment: 'true', json: 'true'},
       headers:{
+        'X-RapidAPI-Host': process.env.REACT_APP_RAPIDAPI_HOST,
+        'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY,
         'x-requested-with': 'text/plain'
       }
     })
