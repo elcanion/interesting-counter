@@ -44,14 +44,16 @@ function App() {
 
   return (
     <div>
-      <h4>interesting counter</h4>
-      <div className="counter">
-          <button className="counter--minus" onClick={subtract}>-</button>
-          <div className="counter--count">
-            <h1>{count}</h1>
+      <div className='center'>
+        <h4>interesting counter, made by elcanion</h4>
+        <div className="counter">
+            <button className="counter--minus" onClick={subtract}>-</button>
+            <div className="counter--count">
+              <h1>{count}</h1>
+            </div>
+            <button className="counter--plus" onClick={add}>+</button>
           </div>
-          <button className="counter--plus" onClick={add}>+</button>
-        </div>
+      </div>
       <div className='fact--box'>
         <h4 className='fact--text'>{fact}</h4>
       </div>
